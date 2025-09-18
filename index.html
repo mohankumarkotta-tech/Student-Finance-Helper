@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Finance Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">💰 Student Finance</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+
+    <!-- Student Details Form -->
+    <div id="student-form" class="active-module">
+      <h2 class="text-center fw-bold">👩‍🎓 Enter Your Details</h2>
+      <form id="detailsForm" class="mt-4">
+        <div class="mb-3">
+          <label for="studentName" class="form-label">Student Name</label>
+          <input type="text" class="form-control" id="studentName" required>
+        </div>
+        <div class="mb-3">
+          <label for="studentIncome" class="form-label">Monthly Income (₹)</label>
+          <input type="number" class="form-control" id="studentIncome" required>
+        </div>
+        <button type="submit" class="btn btn-custom">Save & Continue</button>
+      </form>
+    </div>
+
+    <!-- Dashboard and Modules -->
+    <div id="dashboard" class="module text-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png" class="student-img" alt="Student">
+      <h2 class="fw-bold">📊 Welcome, <span id="displayName"></span></h2>
+      <p>Your monthly income: ₹<span id="displayIncome"></span></p>
+
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <button class="card dashboard-card p-4 text-center w-100" onclick="openModule('budget')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" class="dashboard-img" alt="Budget">
+            <h5>Budget</h5><p>Plan and manage your monthly spending</p>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="card dashboard-card p-4 text-center w-100" onclick="openModule('expenses')">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" class="dashboard-img" alt="Expenses">
+            <h5>Expenses</h5><p>Track daily expenses</p>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="card dashboard-card p-4 text-center w-100" onclick="openModule('savings')">
+            <img src="https://cdn-icons-png.flaticon.com/512/1048/1048914.png" class="dashboard-img" alt="Savings">
+            <h5>Savings</h5><p>Save for projects & goals</p>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="card dashboard-card p-4 text-center w-100" onclick="openModule('bills')">
+            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331940.png" class="dashboard-img" alt="Bills">
+            <h5>Bills</h5><p>Monitor monthly bills</p>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="card dashboard-card p-4 text-center w-100" onclick="openModule('split')">
+            <img src="https://cdn-icons-png.flaticon.com/512/2769/2769103.png" class="dashboard-img" alt="Split">
+            <h5>Split Expenses</h5><p>Share costs with friends</p>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="card dashboard-card p-4 text-center w-100" onclick="openModule('advice')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135673.png" class="dashboard-img" alt="Advice">
+            <h5>Advice</h5><p>Personalized finance tips</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modules -->
+    <div id="budget" class="module"></div>
+    <div id="expenses" class="module"></div>
+    <div id="savings" class="module"></div>
+    <div id="bills" class="module"></div>
+    <div id="split" class="module"></div>
+    <div id="advice" class="module"></div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Student Finance Dashboard | Designed for Smart Money Habits 💡</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
